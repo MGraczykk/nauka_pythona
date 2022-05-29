@@ -11,6 +11,13 @@ class Paletka:
         self.kolor_obiektu = kolor
         print(f"Utworzyliśmy obiekt o kolorze: {self.kolor_obiektu} - ID: {id(self)}")
 
+    def info(self):
+        print(f"Kolor obiektu to: {self.kolor_obiektu}")
+
+    def info_ex(self, nazwa):
+        print(f"Kolor obiektu {nazwa} to: {self.kolor_obiektu}")
+
+
 # tworzymy obiekt na podstawie klasy, podajeemy nazwę obiektu (paleetka_a) i wywołujemy konstruktor klasy (Paletka())
 # f-string
 # val = 'Python course'
@@ -31,3 +38,7 @@ def testklasy():
     print("*****************************")
     print(f"Kolor dla paletka_a: {paletka_a.kolor_obiektu}")
     print(f"Kolor dla paletka_b: {paletka_b.kolor_obiektu}")
+    paletka_a.info()
+    paletka_b.info()
+    paletka_a.info_ex("paletka_a")
+    paletka_b.info_ex("paletka_b")
