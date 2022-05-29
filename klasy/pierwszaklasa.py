@@ -1,0 +1,33 @@
+# najprostszy sposób definiowania obiektu
+# pass jest to po prostu miejsce dla funkcjonalności, która będzie dodana później
+# pass może być użyte w ciele (a body, które nic nie robi
+# def odejmij(a, b):
+#     pass
+#self reprezentuje instację klasę. Dzięki użyciu self my możemy mieć dostęp do właściwości i metod klasy w Pythonie.
+# Tworzenie obiektu realizujemy przez tzw. konstruktor - jest to specjalna metoda, która jest wykonywana, kiedy tworzymy nasz obiekt. W Pythonie taką funkcję pełni metoda __init__.
+
+class Paletka:
+    def __init__(self, kolor):
+        self.kolor_obiektu = kolor
+        print(f"Utworzyliśmy obiekt o kolorze: {self.kolor_obiektu} - ID: {id(self)}")
+
+# tworzymy obiekt na podstawie klasy, podajeemy nazwę obiektu (paleetka_a) i wywołujemy konstruktor klasy (Paletka())
+# f-string
+# val = 'Python course'
+# print(f"Rezultat zwracany przez naszą zmienną to {val}")
+
+# name = 'Marta'
+# age = 20
+# print(f"Hello, my name is {name} nad I am {age} years old")
+def testklasy():
+    paletka_a = Paletka("czerony")
+    paletka_b = Paletka("niebieski")
+    print("*****************************")
+    print(f"Obiekt typu {type(paletka_a)} zawiera od razu pewne właściwości i metody:")
+    print(dir(paletka_a))
+    print("*****************************")
+    print(f"Obiekt typu {type(paletka_b)} zawiera od razu pewne właściwości i metody:")
+    print(dir(paletka_b))
+    print("*****************************")
+    print(f"Kolor dla paletka_a: {paletka_a.kolor_obiektu}")
+    print(f"Kolor dla paletka_b: {paletka_b.kolor_obiektu}")
